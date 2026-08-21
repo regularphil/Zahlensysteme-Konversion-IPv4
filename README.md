@@ -99,23 +99,32 @@ Binär: `11001000`
 
 ---
 
-### **3. Dezimal → Binär**
-**Schritt-für-Schritt:**
-1. Suche die größte Potenz von 2, die kleiner oder gleich der Dezimalzahl ist.
-2. Subtrahiere diese Potenz von der Dezimalzahl und wiederhole den Vorgang mit dem Rest.
-3. Schreibe die Binärziffern (1 für jede subtrahierte Potenz, 0 für nicht subtrahierte).
+### 🔢 Dezimal → Binär (mit /2-Methode)
 
-**Beispiel:**
-Dezimal: `200`
-- 128 ≤ 200 → **1** (Rest: 200 - 128 = 72)
-- 64 ≤ 72 → **1** (Rest: 72 - 64 = 8)
-- 32 > 8 → **0**
-- 16 > 8 → **0**
-- 8 ≤ 8 → **1** (Rest: 8 - 8 = 0)
-- 4 > 0 → **0**
-- 2 > 0 → **0**
-- 1 > 0 → **0**
-- **Ergebnis:** `11001000`
+**Schritt-für-Schritt:**
+1. Teile die Dezimalzahl durch **2** und notiere den **Rest** (0 oder 1).
+2. Wiederhole den Vorgang mit dem **Quotienten**, bis der Quotient **0** ist.
+3. Die Binärzahl ergibt sich aus den **Resten von unten nach oben** gelesen.
+
+**Beispiel: Dezimal `200` → Binär**
+
+
+   Schritt | Division | Quotient | Rest |
+ |---------|----------|----------|------|
+ | 1       | 200 / 2  | 100      | `0`  |
+ | 2       | 100 / 2  | 50       | `0`  |
+ | 3       | 50 / 2   | 25       | `0`  |
+ | 4       | 25 / 2   | 12       | `1`  |
+ | 5       | 12 / 2   | 6        | `0`  |
+ | 6       | 6 / 2    | 3        | `0`  |
+ | 7       | 3 / 2    | 1        | `1`  |
+ | 8       | 1 / 2    | 0        | `1`  |
+
+**Ergebnis:**
+Die Reste von **unten nach oben** gelesen: `11001000` (Binär)
+
+---
+**Hinweis:** Diese Methode ist besonders nützlich für größere Zahlen, da sie systematisch und einfach anwendbar ist.
 
 ---
 
